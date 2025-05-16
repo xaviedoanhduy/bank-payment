@@ -2,15 +2,16 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields
-from odoo.tests.common import TransactionCase
+from odoo.tests import tagged
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestSaleOrder(TransactionCase):
+@tagged("post_install", "-at_install")
+class TestSaleOrder(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.partner = cls.env["res.partner"].create({"name": "Test Partner"})
-        cls.company = cls.env.user.company_id
         cls.bank = cls.env["res.bank"].create(
             {
                 "name": "Test Bank",
