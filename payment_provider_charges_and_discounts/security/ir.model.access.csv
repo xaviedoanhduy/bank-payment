@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payment_fee_rule_user,payment.fee.rule.user,model_payment_fee_rule,base.group_user,1,1,1,1
+access_payment_discount_rule_user,payment.discount.rule.user,model_payment_discount_rule,base.group_user,1,1,1,1
+access_payment_charge_simulator_user,payment.charge.simulator.user,model_payment_charge_simulator,base.group_user,1,1,1,1
